@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your salary in Lakhs: ");
+        double a = sc.nextDouble();
+        double tax = 0;
+        if (a <= 1.5){
+            System.out.printf("You dont have to give any tax. Enjoy Baby............");
+        }
+        else if (a <= 3) {
+            tax = a * 0.10;
+            System.out.printf("Tax= %.2fLakhs", tax);
+        }
+        else if (a <= 5) {
+            tax = a * 0.20;
+            System.out.printf("Tax= %.2fLakhs", tax);
+        }
+        else {
+            tax = a * 0.30;
+            System.out.printf("Tax= %.2fLakhs", tax);
+        }
+    }
+}
