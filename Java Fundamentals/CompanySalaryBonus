@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Your Salary: \n");
+        double a = sc.nextDouble();
+        sc.nextLine();
+        System.out.print("Enter Your Sex(M/F): ");
+        String b = sc.nextLine();
+        double bonus = 0;
+        if (b.equals("M")){
+            bonus = a * 0.05;
+        }
+        else if (b.equals("F")){
+            bonus = a * 0.10;
+        }
+        else {
+            System.out.println("Invalid sex input.");
+            return;
+        }
+        if (a < 10000){
+            bonus += a * 0.02;
+        }
+        double c = a + bonus;
+        System.out.printf("Salary: %f\n", a);
+        System.out.printf("Bonus: %f\n",  bonus);
+        System.out.printf("Bonus + Salary: %f", c);
+    }
+}
