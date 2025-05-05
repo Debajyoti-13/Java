@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your result(0 to 100): ");
+        int a = sc.nextInt();
+        if (a >= 40){
+            System.out.printf("You are pass.");
+            if (a>= 90){
+                System.out.printf("Grade A+");
+            } else if (a>= 75) {
+                System.out.printf("Grade A");
+            } else if (a>= 60) {
+                System.out.printf("Grade B");
+            } else if (a>= 50) {
+                System.out.print("Grade C");
+            }
+            else {
+                System.out.printf("Grade D");
+            }
+        }
+        else {
+            System.out.printf("You are Fail.\n");
+            System.out.printf("Grade F");
+        }
+    }
+}
